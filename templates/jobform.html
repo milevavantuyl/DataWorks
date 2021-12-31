@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+<!-- HTML page containing the job search form -->
+
+{% block main_content %}
+<h1 id ="title"> Search Job Postings </h1>
+
+<!-- HTML Form -->
+<form method="POST" action="{{url_for('search')}}">
+
+    <!-- Drop down to select the jobtype -->
+    <label>Job Type: 
+        <select id="jobtype" name="jobtype" required>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Business Analyst">Business Analyst</option>
+            <option value="Data Engineer">Data Engineer</option>
+        </select>
+    </label>
+
+    <!-- @Richard add additional components to the form here -->
+
+    <!-- Submit button -->
+    <p> <input type="submit" value="Search Jobs"> </p>
+    
+</form>
+{% endblock %}

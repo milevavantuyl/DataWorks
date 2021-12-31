@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+<!-- HTML to display job results page -->
+
+{% block main_content %}
+<h1> Search Results</h1>
+
+<!-- Display the values submitted in the form -->
+<h4> Submitted form "{{query}}"</h4>
+
+    <!-- A description for each job. Contains a link to job-specific page-->
+    {% for job in jobs %}
+
+    <div class="result">
+        <button class = "accordion"> {{job.title}}, {{job.company}} </button>
+            <div class = "panel">
+                <h4>Job Title: <a href="{{url_for('showJob', id = job.id)}}">{{job.title}}</a></h4>
+                <h4> Company: {{job.company}} 
+                    <ul>
+                        <li> Rating: {{job.rating}}</li>
+                        <li> Headquarters: {{job.headquarters}}</li>
+                        <li> Size: {{job.size}}</li>
+                        <li> Industry: {{job.industry}}</li>
+                        <li> Sector: {{job.sector}}</li>
+                    </ul>
+                </h4>
+                <p>{{job.description}}</p>
+            </div>
+    </div>
+    {% endfor %}
+
+   <!-- Javascript modified from W3schools Accordion Code
+    https://www.w3schools.com/howto/howto_js_accordion.asp -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display == "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+{% endblock %}

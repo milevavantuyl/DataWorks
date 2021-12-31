@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Richard Bridges, Kyle Rodriguez, Mileva Van Tuyl">
+    <meta name=description content="Data Science Jobs">
+    <title> {{title}} </title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    {% block head_stuff %} {% endblock %}
+</head>
+
+<!-- HTML code shared by all pages of the web application -->
+
+<body>
+{% block nav_bar %}
+<ul id="nav_bar">
+    <li><a href= "{{url_for('index')}}">Home</a></li>
+    <li><a href= "{{url_for('jobTypeComparison')}}">Compare Job Types</a></li>
+    <li><a href= "{{url_for('jobform')}}">Search Jobs</a></li>
+
+{% endblock %}
+
+{% block main_content %}
+{% endblock %}
+
+</body>
+</html>

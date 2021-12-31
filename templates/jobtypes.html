@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block main_content%}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="chart" id='boxplot'>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script>
+                var graphs = {{graph1 | safe}};
+                Plotly.plot("boxplot", graphs, {showLink: false});
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="chart" id = 'barplot'>
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script>
+                var graphs = {{graph2 | safe}};
+                Plotly.plot('barplot', graphs, {showLink: false});
+            </script>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

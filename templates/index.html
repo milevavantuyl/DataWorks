@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<!-- HTML for landing page -->
+<h1 id ="title"> DataWorks: A Web Application for Data Science Jobs </h1>
+<p> View the <a href="{{url_for('jobTypeComparison')}}">Compare Job Types Page</a> to gain insights into the differences between 
+    data science, data analyst, business analyst, and data engineer roles. </p>
+<p> View the <a href="{{url_for('jobform')}}">Job Posting Search Page</a> to explore data related job postings. 
+    From this page, you will be able to input your specific interests and obtain a ranked list of jobs 
+    fitting your criteria. </p>
+
+{% endblock %}

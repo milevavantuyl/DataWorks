@@ -1,0 +1,37 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .accordion {
+    background-color: rgb(215, 227, 255);
+    color: black; 
+    cursor: pointer; 
+    padding: 15px; 
+    width: 100%;
+    text-align: left; 
+    outline: none;
+    font-size: 20px; 
+    transition: 0.4s; 
+}
+
+.active, .accordion:hover {
+    background-color: rgb(184, 204, 253);
+}
+
+.panel {
+    padding: 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden; 
+    border: 10px; 
+    border-color: black;
+}

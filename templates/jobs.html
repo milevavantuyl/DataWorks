@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+<!-- HTML to display details of a specific job posting -->
+
+{% block main_content %}
+<!-- Placeholders displaying the job id, title, company name, and description -->
+<h2> {{job.title}}, {{job.company}}</h2>
+
+<h4> Company:  </h4>
+    <p>
+        <ul>
+            <li> Name: {{job.company}}</li>
+            <li> Rating: {{job.rating}}</li>
+            <li> Headquarters: {{job.headquarters}}</li>
+            <li> Size: {{job.size}}</li>
+            <li> Industry: {{job.industry}}</li>
+            <li> Sector: {{job.sector}}</li>
+        </ul>
+    </p>
+
+
+<h4> Description: </h4>
+<p>{{job.description}}</p>
+
+{% endblock %}
